@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//task1
+task1
 print("1")
 print("Enter your words")
 let size: Int = 4
@@ -49,26 +49,25 @@ for element in stringArray{
 
 //task2
 print("\n2")
-let students: [String] = ["Kofi: +091", "Abena: +091", "Peter: +091", "Kweku: +091", "Akosua: +091", "Tori: +091", "Cat: +091", "John: +091", "Jonny: +091", "Sehun: +091","Jennie: +091", "Lisa: +091", "Rose: +091", "Jisoo: +091", "Amy: +091","Gloria: +091", "Anna: +091", "Penny: +091", "Leonard: +091", "Howard: +091"]
+let students: [String : String] = ["Kofi" : "+091", "Abena" : "+091", "Peter" : "+091", "Kweku" : "+091", "Akosua" : "+091", "Tori" : "+091", "Cat" : "+091", "John" : "+091", "Jonny" : "+091", "Sehun" : "+091","Jennie" : "+091", "Lisa" : "+091", "Rose" : "+091", "Jisoo" : "+091", "Amy" : "+091","Gloria" : "+091", "Anna" : "+091", "Penny" : "+091", "Leonard" : "+091", "Howard" : "+091"]
 print(students)
-let sortedStudents = students.sorted()
+let sortedStudents = Array(students.keys).sorted()
 print(sortedStudents)
 
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 for letter in alphabet{
     var count: Int = 0
 
-    for element in students{
-        if element.lowercased().hasPrefix(letter){
+    for (key, _) in students{
+        if key.lowercased().hasPrefix(letter){
             count += 1
-            print(element)
+            print(key)
         }
     }
     if count != 0{
         print("Elements start with letter", letter, ":", count)
     }
 }
-
 //task3
 print("\n3")
 var questions: [[String]] = [["q1","a1"],["q2","a2"],["q3","a3"],["q4","a4"],["q5","a5"],["q6","a6"],["q7","a7"],["q8","a8"],["q9","a9"],["q10","a10"],["q11","a11"],["q12","a12"],["q13","a13"],["q14","a14"],["q15","a15"]]
