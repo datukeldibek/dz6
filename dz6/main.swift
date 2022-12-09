@@ -6,7 +6,7 @@
 //
 
 import Foundation
-task1
+//task1
 print("1")
 print("Enter your words")
 let size: Int = 4
